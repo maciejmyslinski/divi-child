@@ -30,7 +30,7 @@
 // START Editing Project Variables.
 // Project related.
 var project                 = 'WPGulpTheme'; // Project Name.
-var projectURL              = 'wpgulp.dev'; // Project URL. Could be something like localhost:8888.
+var projectURL              = 'http://127.0.0.1:8080/wordpress/'; // Project URL. Could be something like localhost:8888.
 var productURL              = './'; // Theme/Plugin URL. Leave it like it is, since our gulpfile.js lives in the root folder.
 
 // Translation related.
@@ -173,10 +173,10 @@ gulp.task( 'browser-sync', function() {
     .pipe( sourcemaps.init() )
     .pipe( sass( {
       errLogToConsole: true,
-      outputStyle: 'compact',
-      //outputStyle: 'compressed',
+      // outputStyle: 'compact',
+      // outputStyle: 'compressed',
       // outputStyle: 'nested',
-      // outputStyle: 'expanded',
+      outputStyle: 'expanded',
       precision: 10
     } ) )
     .on('error', console.error.bind(console))
